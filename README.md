@@ -1,14 +1,12 @@
 # Spree Static Content
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_static_content.svg?branch=master)](https://travis-ci.org/spree-contrib/spree_static_content)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_static_content)
 
 Good, clean content management of pages for Spree. You can use this to:
 
 - Add and manage static pages such as an 'About' page.
 - Show a static page instead of existing dynamic pages such as the home page,
   products pages, and taxon pages.
-
+- Build a blog!
 ---
 
 ## HowTo
@@ -48,7 +46,7 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: 'X-X-stable'
+  gem 'spree_static_content', github: 'nospecinc/spree_static_content', branch: 'X-X-stable'
   ```
 
   The `branch` option is important: it must match the version of Spree you're using.
@@ -68,18 +66,4 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
   If your server was running, restart it so that it can find the assets properly.
 
----
 
-## Contributing
-
-See corresponding [guidelines][2]
-
----
-
-Copyright (c) 2008-2015 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
-
-[2]: https://github.com/spree-contrib/spree_static_content/blob/master/CONTRIBUTING.md
-[3]: https://github.com/spree-contrib/spree_static_content/issues
-[4]: https://github.com/peterberkenbosch
-[5]: https://github.com/spree-contrib/spree_static_content/graphs/contributors
-[6]: https://github.com/spree-contrib/spree_static_content/blob/master/LICENSE.md
