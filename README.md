@@ -1,14 +1,13 @@
 # Spree Static Content
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_static_content.svg?branch=3-0-stable)](https://travis-ci.org/spree-contrib/spree_static_content)
-[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_static_content/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_static_content)
+Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities.
 
 Good, clean content management of pages for Spree. You can use this to:
 
+- Build a blog!
 - Add and manage static pages such as an 'About' page.
 - Show a static page instead of existing dynamic pages such as the home page,
   products pages, and taxon pages.
-
 ---
 
 ## HowTo
