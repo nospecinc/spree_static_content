@@ -13,6 +13,7 @@ class Spree::Page < ActiveRecord::Base
   scope :header_links, -> { where(show_in_header: true).visible }
   scope :footer_links, -> { where(show_in_footer: true).visible }
   scope :sidebar_links, -> { where(show_in_sidebar: true).visible }
+  scope :blog, -> { where(blog: true) }
 
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
 
