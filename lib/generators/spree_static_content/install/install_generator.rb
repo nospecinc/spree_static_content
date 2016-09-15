@@ -3,8 +3,17 @@ module SpreeStaticContent
     class InstallGenerator < Rails::Generators::Base
       class_option :auto_run_migrations, type: :boolean, default: false
 
+      source_root File.expand_path("../templates", __FILE__)
+
+      def add_javascripts
+        append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/spree_static_content\n"
+      end
+
+
       def add_stylesheets
         inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', " *= require spree/frontend/spree_static_content\n", before: /\*\//, verbose: true
+        # seems kinda hacky, but need to get the wymeditor files where they are accessible
+        directory 'wymeditor', 'public/assets/wymeditor'
       end
 
       def add_migrations

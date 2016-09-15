@@ -1,12 +1,13 @@
 # Spree Static Content
 
-Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities.
+Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities & wymeditor.
 
 
 Good, clean content management of pages for Spree. You can use this to:
 
 - Add and manage static pages such as an 'About' page.
 - Show a static page instead of existing dynamic pages such as the home page, products pages, and taxon pages.
+- Basic HTML editing through Wymeditor
 - Build a blog. Adds a few extra fields to admin/db: 
   - Flag to mark a page as a blog post
   - Featured image
