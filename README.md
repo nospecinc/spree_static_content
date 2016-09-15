@@ -2,12 +2,20 @@
 
 Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities.
 
+
 Good, clean content management of pages for Spree. You can use this to:
 
-- Build a blog!
 - Add and manage static pages such as an 'About' page.
-- Show a static page instead of existing dynamic pages such as the home page,
-  products pages, and taxon pages.
+- Show a static page instead of existing dynamic pages such as the home page, products pages, and taxon pages.
+- Build a blog. Adds a few extra fields to admin/db: 
+  - Flag to mark a page as a blog post
+  - Featured image
+  - Date publised
+  - Tags
+- Auto generates a feed at /blog/posts.rss of latest 50 items flagged as blog posts.
+- Use your own view/layout to make use of the added blog fields. 
+
+
 ---
 
 ## HowTo
@@ -48,7 +56,7 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 Add to your `Gemfile`:
 
 ```ruby
-gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-0-stable'
+gem 'spree_static_content', github: 'nospecinc/spree_static_content', branch: '3-0-stable'
 ```
 
 Run:
@@ -59,18 +67,4 @@ bundle && bundle exec rails g spree_static_content:install
 
 That's all!
 
----
 
-## Contributing
-
-See corresponding [guidelines][2]
-
----
-
-Copyright (c) 2008-2015 [Peter Berkenbosch][4] and [contributors][5], released under the [New BSD License][6]
-
-[2]: https://github.com/spree-contrib/spree_static_content/blob/3-0-stable/CONTRIBUTING.md
-[3]: https://github.com/spree-contrib/spree_static_content/issues
-[4]: https://github.com/peterberkenbosch
-[5]: https://github.com/spree-contrib/spree_static_content/graphs/contributors
-[6]: https://github.com/spree-contrib/spree_static_content/blob/3-0-stable/LICENSE.md
