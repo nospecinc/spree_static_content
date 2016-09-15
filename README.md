@@ -1,6 +1,9 @@
 # Spree Static Content
 
-Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities & wymeditor.
+Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities & wymeditor.  
+
+**Note:**
+The new blogging features have only been added to the **3-0-stable branch**
 
 
 Good, clean content management of pages for Spree. You can use this to:
