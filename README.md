@@ -1,12 +1,25 @@
 # Spree Static Content
 
+Forked from spree-contrib/spree_static_content to add in more blog-specific capabilities & wymeditor.  
+
+**Note:**
+The new blogging features have only been added to the **3-0-stable branch**
+
 
 Good, clean content management of pages for Spree. You can use this to:
 
 - Add and manage static pages such as an 'About' page.
-- Show a static page instead of existing dynamic pages such as the home page,
-  products pages, and taxon pages.
-- Build a blog!
+- Show a static page instead of existing dynamic pages such as the home page, products pages, and taxon pages.
+- Basic HTML editing through Wymeditor
+- Build a blog. Adds a few extra fields to admin/db: 
+  - Flag to mark a page as a blog post
+  - Featured image
+  - Date publised
+  - Tags
+- Auto generates a feed at /blog/posts.rss of latest 50 items flagged as blog posts.
+- Use your own view/layout to make use of the added blog fields. 
+
+
 ---
 
 ## HowTo
@@ -42,28 +55,20 @@ Finally, toggle the visibility using the 'Visible' checkbox. If it is unchecked,
 
 ---
 
-## Installation
+## Basic Installation
 
-1. Add this extension to your Gemfile with this line:
-  ```ruby
-  gem 'spree_static_content', github: 'nospecinc/spree_static_content', branch: 'X-X-stable'
-  ```
+Add to your `Gemfile`:
 
-  The `branch` option is important: it must match the version of Spree you're using.
-  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
+```ruby
+gem 'spree_static_content', github: 'nospecinc/spree_static_content', branch: '3-0-stable'
+```
 
-2. Install the gem using Bundler:
-  ```ruby
-  bundle install
-  ```
+Run:
 
-3. Copy & run migrations
-  ```ruby
-  bundle exec rails g spree_static_content:install
-  ```
+```sh
+bundle && bundle exec rails g spree_static_content:install
+```
 
-4. Restart your server
-
-  If your server was running, restart it so that it can find the assets properly.
+That's all!
 
 
