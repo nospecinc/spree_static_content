@@ -17,6 +17,7 @@ var wymeditor_boot_options = $.extend(wymopts);
 var cssFile = wymopts.cssSkinPath + wymopts.skin + '/skin.css';
 $(document).ready(function(){
   $('head').append('<link rel="stylesheet" type="text/css" href="'+cssFile+'">');
+  $('form.new_page button[type=submit]').addClass('wymupdate')
   $('form.edit_page button[type=submit]').addClass('wymupdate')
   $('#page_body').wymeditor(wymeditor_boot_options);
 });
