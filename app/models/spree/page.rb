@@ -15,7 +15,7 @@ class Spree::Page < ActiveRecord::Base
   scope :sidebar_links, -> { where(show_in_sidebar: true).visible }
   scope :blog, -> { where(blog: true) }
   scope :recent, -> { order('date_published desc').limit(10) }
-  scope :recent_blog, -> { visible.blog.recent }
+  scope :recent_blog, -> { unscoped.visible.blog.recent }
 
   scope :by_store, ->(store) { joins(:stores).where('spree_pages_stores.store_id = ?', store) }
 
